@@ -1,0 +1,84 @@
+Documentação do Sistema
+Visão Geral
+O sistema é uma aplicação React, que tem como objetivo gerenciar vendas, controle de estoque e facilitar o acompanhamento de dados de vendas. Ele oferece funcionalidades como o filtro de vendas por data e exibição de informações detalhadas.
+
+Estrutura do Projeto
+Frontend: React e React Native
+Funcionalidade Principal:
+
+O sistema é desenvolvido com React (no web) e React Native (para dispositivos móveis), fornecendo uma interface interativa para o usuário.
+
+Utiliza React Context para o gerenciamento de estados globais, como informações de vendas e estoque.
+
+A interface de usuário é projetada de maneira responsiva, permitindo uma boa experiência tanto em dispositivos móveis quanto em telas maiores (desktop).
+
+Componentes Principais:
+Dashboard: Exibe as informações chave, como o total de vendas, itens vendidos e estoque atual. É composto por componentes que mostram informações resumidas em cards.
+
+Campo de Data: Permite ao usuário filtrar vendas por data. O campo pode ser editado diretamente pelo usuário ou utilizar um seletor de data (DateTimePicker).
+
+Vendas Filtradas: Exibe as vendas do dia de acordo com o filtro de data aplicado.
+
+Funcionalidades Implementadas
+1. Filtragem de Vendas por Data
+O sistema permite que o usuário filtre as vendas por data. Isso é feito através de um campo de entrada de texto, onde o valor é atualizado dinamicamente com base na data escolhida pelo usuário. A data inicial é configurada para a data atual.
+
+Exemplo:
+
+O campo de data pode ser alterado manualmente ou através de um seletor de data (DateTimePicker).
+
+Quando o usuário altera a data, o sistema atualiza a lista de vendas filtradas automaticamente.
+
+2. Data Selecionada pelo Usuário
+Texto Editável: O campo de data foi configurado para ser um TextInput, permitindo que o usuário edite diretamente a data no formato YYYY-MM-DD.
+
+Seleção de Data: O campo de data também pode ser alterado utilizando o DateTimePicker, que abre ao focar no campo de texto ou ao clicar no campo.
+
+3. Exibição de Vendas do Dia
+O sistema filtra as vendas de acordo com a data escolhida, exibindo as informações dos itens de venda, como:
+
+Cliente
+
+Valor da venda
+
+Descrição
+
+Data da venda
+
+4. Estilização com React Native
+Cards de Informações: A aplicação exibe dados resumidos como o total de vendas, itens vendidos e estoque atual através de cards estilizados.
+
+Input Responsivo: O campo de entrada de data utiliza o React Native para fornecer uma interface fluida e intuitiva.
+
+Alterações Realizadas
+1. Alteração no Campo de Data
+O campo de data foi inicialmente formatado com restrições, tornando-o não totalmente editável. Com base nos requisitos, foi modificado para ser completamente editável e sem formatação rígida de data, permitindo que o usuário insira qualquer valor no formato de texto livre. O valor padrão é a data atual (YYYY-MM-DD).
+
+2. Melhoria na Interatividade dos Campos
+O campo de data agora aceita o valor como texto livre, o que permite a manipulação direta pelo usuário sem a interferência de formatação de data automática. Além disso, quando o usuário edita a data, o sistema garante que ela seja válida antes de ser aplicada.
+
+3. Implementação do DateTimePicker
+A interação com o DateTimePicker foi ajustada para exibição no iOS ao focar no campo de data.
+
+No Android, o campo de texto permite a alteração diretamente.
+
+4. Filtro de Vendas por Data
+Ao selecionar ou editar a data, a lista de vendas é atualizada de acordo com a data inserida. Isso garante que o usuário possa visualizar as vendas específicas para o dia desejado.
+
+Fluxo de Trabalho e Funcionalidades
+1. Dashboard
+Exibe os dados chave, como o total de vendas, itens vendidos e o estoque atual.
+
+Cada valor é mostrado em um card estilizado, fornecendo uma visão geral clara e objetiva para o usuário.
+
+2. Filtro de Vendas
+O campo de data permite filtrar as vendas do dia, exibindo as transações do dia selecionado.
+
+A exibição das vendas filtradas acontece com base na data, mostrando informações relevantes como cliente, valor e descrição da venda.
+
+3. Componentes de UI
+O sistema utiliza componentes reusáveis, como TextInput para captura de data, DateTimePicker para seleção de data e Card para exibição de resumos de dados.
+
+Considerações Finais
+O sistema foi projetado com o objetivo de facilitar o acompanhamento de vendas e controle de estoque. Com a utilização do React e React Native, ele proporciona uma experiência fluida tanto para usuários de dispositivos móveis quanto de desktop. A flexibilidade no manuseio de dados, especialmente no campo de data, permite que o usuário tenha um controle total sobre as informações.
+
